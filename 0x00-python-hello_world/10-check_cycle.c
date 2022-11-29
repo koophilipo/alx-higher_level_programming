@@ -8,7 +8,7 @@
  */
 int check_cycle(listint_t *ptr)
 {
-	listint_t *head = ptr;
+	listint_t *check_traverse = ptr;
 	listint_t *traverse = ptr;
 
 	if (ptr == NULL)
@@ -16,13 +16,14 @@ int check_cycle(listint_t *ptr)
 		return (0);
 	}
 
-	while ((traverse->next) != NULL)
+	while (check_traverse && traverse && (traverse->next))
 	{
-		if (head == (traverse->next))
+		if (check_traverse->next == traverse->next->next)
 		{
 			return (1);
 		}
-		traverse = traverse->next;
+		traverse = traverse->next->next;
+		check_traverse = check_traverse->next;
 	}
 	return (0);
 }
