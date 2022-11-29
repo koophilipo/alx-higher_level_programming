@@ -6,7 +6,7 @@
  *
  * Return: 1 cycle exits (success), 0 no cycle (fail)
  */
-int check_cycle(char *ptr)
+int check_cycle(listint_t *ptr)
 {
 	listint_t *head = ptr;
 	listint_t *traverse = ptr;
