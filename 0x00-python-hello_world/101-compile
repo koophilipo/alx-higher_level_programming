@@ -1,4 +1,2 @@
 #!/bin/bash
-python3 import os
-name = os.environ["PYFILE"]
-python3 -m py_compile.main(name)
+python3 -m compileall -b "$PYFILE"
