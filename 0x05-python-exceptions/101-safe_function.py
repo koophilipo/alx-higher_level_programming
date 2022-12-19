@@ -9,6 +9,12 @@ def safe_function(fct, *args):
     except ZeroDivisionError as excep:
         sys.stderr.write(f"Exception: {excep}\n")
         return (None)
+    except AttributeError as atterr:
+        sys.stderr.write(f"Exception: {atterr}\n")
+        return (None)
+    except ImportError as Imerr:
+        sys.stderr.write(f"Exception: {Imerr}\n")
+        return (None)
     except IndexError as iderr:
         sys.stderr.write(f"Exception: {iderr}\n")
         return (None)
