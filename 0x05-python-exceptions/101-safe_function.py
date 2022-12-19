@@ -18,5 +18,11 @@ def safe_function(fct, *args):
     except ValueError as verr:
         sys.stderr.write(f"Exception: {verr}\n")
         return (None)
+    except NameError as nerr:
+        sys.stderr.write(f"Exception: {nerr}\n")
+        return (None)
+    except FloatingPointError as ferr:
+        sys.stderr.write(f"Exception: {ferr}\n")
+        return (None)
     else:
         return (val)
